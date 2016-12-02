@@ -1,0 +1,23 @@
+.top-buffer {
+  margin-top:80px;
+}
+.bottom-buffer{
+  margin-bottom:40px;
+}
+h1, h6{
+  text-align:center;
+}
+.form-group{
+  width: 50%;
+  margin:auto;
+}
+body{
+  background-color: #ffffff !important;
+}
+.btnDiv{
+  text-align:center !important;
+}
+.btn{
+  background-color: #800039 !important;
+  color: #ffffff !important;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <title>Contact</title>
+  </head>
+  <body>
+    <h1 class="top-buffer">Contact</h1>
+    <form autocomplete="off" class ="top-buffer" action="/" method="post">
+      <div
+      <% if(success.name === "true"){ %>
+        class = "form-group has-success">
+      <% }else{ %>
+        class = "form-group has-danger">
+        <p>Enter a name</p>
+      <% } %>
+        <label class="sr-only" for="name">Full Name</label>
+        <input name="name" type="text" class="form-control" placeholder="Full Name"
+        value="<%= content.name %>">
+      </div>
+      <div
+      <% if(success.email === "true"){ %>
+        class = "form-group has-success">
+      <% }else{ %>
+        class = "form-group has-danger">
+        <p>Enter a valid email</p>
+      <% } %>
+        <label class="sr-only" for="email">Enter Email</label>
+        <input name="email" type="text" class="form-control" placeholder="Email Address"
+        value="<%= content.email %>">
+      </div>
+      <div
+      <% if(success.message === "true"){ %>
+        class = "form-group has-success">
+      <% }else{ %>
+        class = "form-group has-danger">
+        <p>Enter a message</p>
+      <% } %>
+        <label class="sr-only" for="message">Enter Message</label>
+        <textarea name="message" class="form-control" rows="5" placeholder="Enter Message"><%= content.message %></textarea>
+      </div>
+      <div class = "btnDiv">
+        <button type="submit" class="btn btn-primary bottom-buffer">Submit</button>
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+  </body>
+</html>
